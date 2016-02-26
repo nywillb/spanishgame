@@ -5,7 +5,7 @@ var cards = [
     ];
 
 function newcard(){
-    var cardnum = Math.floor((Math.random() * cards.length) + 1);
+    var cardnum = Math.floor(Math.random() * cards.length);
     document.getElementById("card").innerHTML = cards[cardnum];
 }
 
