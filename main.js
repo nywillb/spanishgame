@@ -6,7 +6,7 @@ var cards = [
 
 function newcard(){
     var cardnum = Math.floor((Math.random() * cards.length) + 1);
-    document.getElementById("card").innerHTML = cardnum;
+    document.getElementById("card").innerHTML = cards[cardnum];
 }
 
 window.onkeypress = function(event) {
