@@ -4,11 +4,23 @@ var cards = [
     "Card 3"
     ];
 
+var cardnum = Math.floor(Math.random() * cards.length -1);
+
+var score = 0
+
+function startgame(){
+    score = 0
+}
+
 function newcard(){
-    var cardnum = Math.floor(Math.random() * cards.length -1);
+    cardnum = Math.floor(Math.random() * cards.length);
     document.getElementById("card").innerHTML = cards[cardnum];
 }
 
 window.onkeypress = function(event) {
-    newcard();
+    if(event.keyCode != 83){
+        newcard();
+    } else if(event.keyCode === 83) {
+        document.getElementById("card").innerHTML = '<i class="fa fa-frown-o"></i>Pasar...'
+    }
 };
