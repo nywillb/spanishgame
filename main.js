@@ -88,7 +88,7 @@ window.onkeypress = function(event) {
     if(event.keyCode != 83){
         newcard();
     } else if(event.keyCode === 83) {
-        document.getElementById("card").innerHTML = '<i class="fa fa-frown-o"></i>Pasar..<br><h5>Pulse cualquier tecla para continuar.</h5>.'
+        document.getElementById("card").innerHTML = '<i class="fa fa-frown-o"></i>Pasar...'
     }
 };
 //This is the end.
