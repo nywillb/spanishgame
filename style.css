@@ -12,3 +12,9 @@ body {
   top: 50%;
   text-align: center !important;
 }
+
+#continue {
+  position: fixed;
+  top: 55%;
+  text-align: center !important;
+}
