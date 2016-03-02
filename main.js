@@ -97,12 +97,12 @@ window.onkeypress = function(event) {
     	}, 60000);
     	gamestage = 1;
     } else if(gamestage != 2){
-	    if(event.keyCode != 83){
-	    	newcard();
-	        score = score + 1;
-	    } else if(event.keyCode === 83) {
+	    if(event.keyCode === 80){
 	        document.getElementById("card").innerHTML = '<i class="fa fa-frown-o"></i>Pasar...'
 	        score = score - 2
+	    } else {
+	    	newcard();
+	        score = score + 1;
 	    }
     }
 };
