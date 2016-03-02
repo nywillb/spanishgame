@@ -91,3 +91,4 @@ window.onkeypress = function(event) {
         document.getElementById("card").innerHTML = '<i class="fa fa-frown-o"></i>Pasar...'
     }
 };
+//This is the end.
