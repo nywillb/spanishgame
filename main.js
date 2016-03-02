@@ -79,16 +79,9 @@ var cards = [
 
 var cardnum = Math.floor(Math.random() * cards.length -1);
 
-var score = 0
-
-function startgame(){
-    score = 0
-}
-
 function newcard(){
 	cardnum = Math.floor(Math.random() * cards.length);
 	document.getElementById("card").innerHTML = cards[cardnum];
-	//cards.splice(index, cardnum);
 }
 
 window.onkeypress = function(event) {
