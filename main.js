@@ -94,7 +94,7 @@ window.onkeypress = function(event) {
     	setTimeout(function(){
     		gamestage === 2;
     		document.getElementById("card").innerHTML = '<i class="fa fa-clock-o"></i>Se acabó el tiempo. Su puntuación final es ' + score
-    	}, 3000);
+    	}, 60000);
     	gamestage = 1;
     } else if(gamestage != 2){
 	    if(event.keyCode != 83){
