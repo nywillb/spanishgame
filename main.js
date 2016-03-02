@@ -77,6 +77,10 @@ var cards = [
 	"ser buena onda",
 ];
 
+var score = 0;
+
+var gamestage = 0;
+
 var cardnum = Math.floor(Math.random() * cards.length -1);
 
 function newcard(){
@@ -85,10 +89,21 @@ function newcard(){
 }
 
 window.onkeypress = function(event) {
-    if(event.keyCode != 83){
-        newcard();
-    } else if(event.keyCode === 83) {
-        document.getElementById("card").innerHTML = '<i class="fa fa-frown-o"></i>Pasar...'
+    if (gamestage === 0){
+    	newcard();
+    	setTimeout(function(){
+    		gamestage === 2;
+    		document.getElementById("card").innerHTML = '<i class="fa fa-clock-o"></i>Se acabó el tiempo. Su puntuación final es ' + score
+    	}, 3000);
+    	gamestage = 1;
+    } else if(gamestage != 2){
+	    if(event.keyCode != 83){
+	    	newcard();
+	        score = score + 1;
+	    } else if(event.keyCode === 83) {
+	        document.getElementById("card").innerHTML = '<i class="fa fa-frown-o"></i>Pasar...'
+	        score = score - 2
+	    }
     }
 };
 //This is the end.
