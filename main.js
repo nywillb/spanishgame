@@ -87,7 +87,7 @@ function startgame(){
 
 function newcard(){
     if (array === undefined || array.length == 0) {
-    	document.getElementById("card").innerHTML = '<i class="fa fa-smile-o"></i>Ha alcanzado el final! Recargar la página para volver a jugar.'
+    	document.getElementById("card").innerHTML = '<i class="fa fa-smile-o"></i>Ha alcanzado el final! Recargar la página para volver a jugar.';
     } else if {
     	cardnum = Math.floor(Math.random() * cards.length);
 	document.getElementById("card").innerHTML = cards[cardnum];
